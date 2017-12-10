@@ -5,7 +5,7 @@ import os
 
 # Configure Flask app
 app = Flask(__name__, static_url_path='/static')
-app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object("config.DevelopmentConfig")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # Database
